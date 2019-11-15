@@ -10,6 +10,14 @@ public class PlayerDataToSave
     public float x, y, z;
     public float rX, rY, rZ, rW;
     public float pX, pY, pZ;
+    public int skinIndex;
+    public int hairIndex;
+    public int eyesIndex;
+    public int mouthIndex;
+    public int clothesIndex;
+    public int armourIndex;
+    public int classIndex;
+    public int[] stats = new int [6];
 
     public PlayerDataToSave(PlayerHandler player)
     {

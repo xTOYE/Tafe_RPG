@@ -169,4 +169,3 @@ using UnityEngine.UI;
             curHealth += Time.deltaTime * (healRate + stats[2].value);
         }
     }
-

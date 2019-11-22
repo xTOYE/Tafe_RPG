@@ -6,6 +6,7 @@ public class LoadCustomisation : MonoBehaviour
 {
     public static Renderer character;
     public PlayerHandler player;
+
     private void Awake()
     {
         character = GameObject.FindGameObjectWithTag("Renderer").GetComponent<SkinnedMeshRenderer>();

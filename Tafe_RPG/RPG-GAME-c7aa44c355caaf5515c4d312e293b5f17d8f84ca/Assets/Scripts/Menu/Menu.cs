@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
@@ -16,5 +15,9 @@ public class Menu : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
         Application.Quit();
+    }
+    public void Slot(int slotNum)
+    {
+        PlayerDataToSave.saveSlot = slotNum;
     }
 }

@@ -4,24 +4,32 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool isPaused;//pause state that everything can see
+    //pause state that everything can see
+    public static bool isPaused;
     private GameObject _pauseMenu;
 
-    void Start()//start if the game set the defaults
+    //start if the game set the defaults
+    void Start()
     {
         _pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         _pauseMenu.SetActive(false);
-        isPaused = false;//we are not pauseed
-        Time.timeScale = 1;//start time
-        Cursor.lockState = CursorLockMode.Locked;//lock cursor to centre of screen
-        Cursor.visible = false;//hide cursoe
+        //we are not pauseed
+        isPaused = false;
+        //start time
+        Time.timeScale = 1;
+        //lock cursor to centre of screen
+        Cursor.lockState = CursorLockMode.Locked;
+        //hide cursoe
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        if(Input.GetButtonDown("Cancel"))//press escape
+        //press escape
+        if (Input.GetButtonDown("Cancel"))
         {
-            TogglePause();//runs toggle pause function
+            //runs toggle pause function
+            TogglePause();
         }
     }
 
@@ -29,20 +37,30 @@ public class PauseMenu : MonoBehaviour
     {
         if(isPaused)
         {
-            _pauseMenu.SetActive(false);//hide pause menu
-            isPaused = false;//we are not paused
-            Time.timeScale = 1;//start time
-            Cursor.lockState = CursorLockMode.Locked;//lock curosr to centre
-            Cursor.visible = false;//hide cursor
+            //hide pause menu
+            _pauseMenu.SetActive(false);
+            //we are not paused
+            isPaused = false;
+            //start time
+            Time.timeScale = 1;
+            //lock curosr to centre
+            Cursor.lockState = CursorLockMode.Locked;
+            //hide cursor
+            Cursor.visible = false;
         }
 
         else
         {
-            _pauseMenu.SetActive(true);//show pause menu
-            isPaused = true;//we are now paused
-            Time.timeScale = 0;//stop time
-            Cursor.lockState = CursorLockMode.None;//allow cursor movement
-            Cursor.visible = true;//shows cursor
+            //show pause menu
+            _pauseMenu.SetActive(true);
+            //we are now paused
+            isPaused = true;
+            //stop time
+            Time.timeScale = 0;
+            //allow cursor movement
+            Cursor.lockState = CursorLockMode.None;
+            //shows cursor
+            Cursor.visible = true;
         }
     }
 }

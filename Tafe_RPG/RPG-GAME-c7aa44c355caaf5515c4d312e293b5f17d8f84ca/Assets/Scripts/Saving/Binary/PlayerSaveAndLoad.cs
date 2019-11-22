@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 public class PlayerSaveAndLoad : MonoBehaviour
 {
     public PlayerHandler player;
@@ -7,7 +8,7 @@ public class PlayerSaveAndLoad : MonoBehaviour
     {
       if(!custom)
         {
-            Debug.Log("Load Binary shiz");
+            //Debug.Log("Load Binary shiz");
             Load();
         }
     }    

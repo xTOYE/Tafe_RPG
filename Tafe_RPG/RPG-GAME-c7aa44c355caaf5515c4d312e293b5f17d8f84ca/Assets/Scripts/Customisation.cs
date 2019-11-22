@@ -70,7 +70,7 @@ public class Customisation : MonoBehaviour
     }
     public void Save()
     {
-        //New Char Base info
+        //New Character Base info
         player.maxHealth = 100;
         player.maxMana = 100;
         player.maxStamina = 100;
@@ -79,7 +79,7 @@ public class Customisation : MonoBehaviour
         player.curMana = player.maxMana;
         player.curStamina = player.maxStamina;
 
-        //new Char Stats
+        //new Character Stats
         player.skinIndex = skinIndex;
         player.hairIndex = hairIndex;
         player.mouthIndex = mouthIndex;
